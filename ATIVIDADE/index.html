@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 3 - BD3</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Alunos</h1>
+
+    <div class="content">
+        <form id="add-student-form">
+            <input type="text" name="cod_aluno" placeholder="Código do Aluno" required />
+            <input type="text" name="nome" placeholder="Digite o nome do aluno" />
+            <input type="text" name="cpf" placeholder="Digite o CPF do aluno" />
+            <input type="text" name="rg" placeholder="Digite o RG do aluno" />
+            <input type="text" name="telefone_aluno" placeholder="Digite o telefone do aluno" />
+            <input type="text" name="telefone_responsavel" placeholder="Digite o telefone do responsável pelo aluno" />
+            <input type="text" name="email" placeholder="Digite um email para contato" />
+            <input type="date" name="data_nascimento" placeholder="Digite a data de nascimento do aluno" />
+            <button type="submit">Cadastrar Aluno</button>
+        </form>
+        <ul id="students-list"></ul>
+    </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyD0KUz7z7GhJtblBJ9sXBaMCfbCCe4gILM",
+        authDomain: "bd3-app-libri-isaias.firebaseapp.com",
+        projectId: "bd3-app-libri-isaias",
+        storageBucket: "bd3-app-libri-isaias.appspot.com",
+        messagingSenderId: "1027754178239",
+        appId: "1:1027754178239:web:cfa7871c7a151d4b67b80a",
+        measurementId: "G-S8H22DSYHE"
+    };
+
+
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+    console.log(db);
+</script>
+
+<script src="app.js"></script>
+
+</html>
